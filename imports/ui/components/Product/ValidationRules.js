@@ -1,6 +1,5 @@
 import validator from 'validator';
 import { required } from '../../validations/Validatiors';
-console.log(validator);
 export const ValidationRules = [
   {
     field: 'name',
