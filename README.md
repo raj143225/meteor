@@ -1,19 +1,20 @@
 Prerequisites:
 --------------
  - npm >= v5.6.0
- - node >= v10.2.1
- - meteor >= 1.6.1.1
+ - node >= v10.2.1 
+ - meteor >= 1.6.1.1 (https://www.meteor.com/install)
 
 Clone:
 -----
+````
 git clone https://github.com/raj143225/meteor.git /path/to/dir
 cd /path/to/dir
-
+````
 Development setup:
 -----------
 ```cmd
 Start database server first:
-  meteor mongo (from project's root)
+ meteor mongo
 
 Open another terminal and chnage to project path:
 Steps:-
@@ -39,4 +40,4 @@ Demo:
 https://react-meteor-demo.herokuapp.com/
 
 - Deployed Mondo DB in mLab
-- Deployed production build in heroku
+- hosted production build in heroku
