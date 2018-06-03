@@ -9,7 +9,7 @@ class ProductsList extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      deleteLoading: false
     };
 
     this.removeProduct = this.removeProduct.bind(this);
@@ -17,7 +17,7 @@ class ProductsList extends PureComponent {
 
   removeProduct = (productId) => {
     this.setState({
-      loading: !this.state.loading
+      deleteLoading: !this.state.deleteLoading
     });
     setTimeout(() => Meteor.call('products.remove', productId, (error, result) => {
       if (result) {
@@ -26,7 +26,7 @@ class ProductsList extends PureComponent {
         toastr.error('Some thing went wrong please try again');
       }
       this.setState((prevState) => ({
-        loading: !prevState.loading
+        deleteLoading: !prevState.deleteLoading
       }));
     }), 1000);
     return true;
@@ -45,7 +45,8 @@ class ProductsList extends PureComponent {
   );
 
   render = () => {
-    const {loading} = this.state;
+    const { deleteLoading } = this.state;
+    const { listLoading } = this.props;
     return (
       <React.Fragment>
         <div className="row">
@@ -53,7 +54,7 @@ class ProductsList extends PureComponent {
             <h3>Products</h3>
           </div>
           <div className="col-sm-6 list-loader">
-            {loading && <ReactLoading type="spin" color="#444" height={30} width={30}/>}
+            {(deleteLoading || listLoading) && <ReactLoading type="spin" color="#444" height={30} width={30}/>}
           </div>
         </div>
         <table className="table table-responsive table-striped">
@@ -76,7 +77,9 @@ class ProductsList extends PureComponent {
 
 
 export default withTracker(() => {
+  const handle = Meteor.subscribe('products');
   return {
+    listLoading: !handle.ready(),
     allProducts: Products.find({}, {sort: {createdAt: -1}}).fetch(),
   };
 })(ProductsList);

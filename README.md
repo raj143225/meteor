@@ -10,8 +10,8 @@ Clone:
 git clone https://github.com/raj143225/meteor.git /path/to/dir
 cd /path/to/dir
 ````
-Development setup:
------------
+Development Setup:
+-----------------
 ```cmd
 Start database server first:
  meteor mongo
@@ -39,5 +39,5 @@ Demo:
 ----
 https://react-meteor-demo.herokuapp.com/
 
-- Deployed Mondo DB in mLab
-- hosted production build in heroku
+- Deployed Mongo DB in mLab
+- Hosted production build in heroku
