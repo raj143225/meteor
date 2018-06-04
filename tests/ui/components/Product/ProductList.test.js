@@ -3,7 +3,7 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ProductsList from '../../../../imports/ui/components/Product/ProductsList';
 configure({ adapter: new Adapter() });
-jest.mock('meteor/react-meteor-data');
+
 let props = {
   allProducts: [{
     _id: 1,
