@@ -7,6 +7,21 @@
       "presets": [["env", {"modules": false, "debug": true}], "react"],
       "plugins": ["transform-class-properties", "transform-es2015-modules-commonjs"]
     },
-    "production": {}
+    "production": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions"]
+          },
+          "modules": false,
+          "debug": true
+        }],
+        "react",
+        "minify"
+      ],
+      "plugins": [
+        "transform-class-properties"
+      ]
+    }
   }
 }

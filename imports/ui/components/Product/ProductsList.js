@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading';
 import {withTracker} from 'meteor/react-meteor-data';
 import {Products} from '../../../api/products';
 
-
+// ProductsList component - represents the Products List
 class ProductsList extends PureComponent {
   constructor(props) {
     super(props);

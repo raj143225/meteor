@@ -3,6 +3,7 @@ export default class FormValidator {
     this.validations = validations;
   }
 
+  // Validates all fields when submit the form
   validateForm = (formData) => {
     // start out assuming valid
     const validation = { isValid: true, errors: {} };
@@ -21,6 +22,7 @@ export default class FormValidator {
     return validation;
   };
 
+  // Validates a single field
   validateInput = (field, value) => {
     // start out assuming valid
     let validation = { isValid: true, message: '' };

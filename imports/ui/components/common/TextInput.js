@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
+// TextInput component - reusable form component
 class TextInput extends PureComponent {
   render = () => {
     const { name, label, placeholder, value, onChange, error, type='text' } = this.props;
