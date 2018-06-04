@@ -13,13 +13,12 @@ cd /path/to/dir
 Development Setup:
 -----------------
 ```cmd
-Start database server first:
- meteor mongo
-
-Open another terminal and chnage to project path:
 Steps:-
  meteor npm install
  meteor --port 3000
+ 
+Open another terminal and chnage to project path and mongo server:
+ meteor mongo
 
 ```
 
