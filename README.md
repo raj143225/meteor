@@ -42,3 +42,7 @@ https://react-meteor-demo.herokuapp.com/
 
 - Deployed Mongo DB in mLab
 - Hosted production build in heroku
+
+
+
+https://github.com/babel/babel-preset-env/issues/417
