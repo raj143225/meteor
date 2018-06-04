@@ -38,6 +38,7 @@ class ProductsList extends PureComponent {
         <td>{product.name}</td>
         <td>{product.quantity}</td>
         <td>{product.price}</td>
+        <td>{product.price * product.quantity}</td>
         <td><span className="glyphicon glyphicon-remove on-drop" onClick={() => this.removeProduct(product._id)}
                   aria-hidden="true"/></td>
       </tr>
@@ -63,6 +64,7 @@ class ProductsList extends PureComponent {
             <th>Product</th>
             <th>Quantity</th>
             <th>Price</th>
+            <th>Total</th>
             <th>Delete</th>
           </tr>
           </thead>
