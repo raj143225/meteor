@@ -1,4 +1,11 @@
 {
-  "presets": [["env", {"modules": false, "debug": true}], "react"],
-  "plugins": ["transform-class-properties", "transform-es2015-modules-commonjs"]
+  "env": {
+    "dev": {
+      "presets": [["env", {"modules": false, "debug": true}], "react"]
+    },
+    "test": {
+      "presets": [["env", {"modules": false, "debug": true}], "react"],
+      "plugins": ["transform-class-properties", "transform-es2015-modules-commonjs"]
+    }
+  }
 }
