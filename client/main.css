@@ -9,3 +9,7 @@ h1 {
     text-align: center;
     color: #a72c2c;
 }
+
+.on-drop {
+    cursor: no-drop;
+}

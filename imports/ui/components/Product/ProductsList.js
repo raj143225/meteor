@@ -19,7 +19,7 @@ class ProductsList extends PureComponent {
     this.setState({
       deleteLoading: !this.state.deleteLoading
     });
-    setTimeout(() => Meteor.call('products.remove', productId, (error, result) => {
+    Meteor.call('products.remove', productId, (error, result) => {
       if (result) {
         toastr.success('Successfully deleted');
       } else {
@@ -28,7 +28,7 @@ class ProductsList extends PureComponent {
       this.setState((prevState) => ({
         deleteLoading: !prevState.deleteLoading
       }));
-    }), 1000);
+    });
     return true;
   };
 
@@ -38,7 +38,7 @@ class ProductsList extends PureComponent {
         <td>{product.name}</td>
         <td>{product.quantity}</td>
         <td>{product.price}</td>
-        <td><span className="glyphicon glyphicon-remove" onClick={() => this.removeProduct(product._id)}
+        <td><span className="glyphicon glyphicon-remove on-drop" onClick={() => this.removeProduct(product._id)}
                   aria-hidden="true"/></td>
       </tr>
     ))

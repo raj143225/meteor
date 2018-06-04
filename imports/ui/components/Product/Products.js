@@ -66,12 +66,12 @@ export default class Products extends PureComponent {
       return true;
     }
 
-    setTimeout(() => Meteor.call('products.insert', this.state.product, (error, result) => {
+    Meteor.call('products.insert', this.state.product, (error, result) => {
       if (result) {
         let initProduct = Object.assign({}, this.state.product);
-        initProduct.name ='';
-        initProduct.quantity ='';
-        initProduct.price ='';
+        initProduct.name = '';
+        initProduct.quantity = '';
+        initProduct.price = '';
         this.setState({
           product: initProduct
         });
@@ -82,7 +82,7 @@ export default class Products extends PureComponent {
       this.setState((prevState) => ({
         addLoading: !prevState.addLoading
       }));
-    }), 1000);
+    });
     return true;
   };
 

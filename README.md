@@ -28,6 +28,8 @@ Production Build Steps:
 ```cmd
  npm install --production
  meteor build /path/to/build --architecture os.linux.x86_64
+ Note: Above step creates a tar file extract and create my_build_bundle_directory
+ 
  cd my_build_bundle_directory
  cd programs/server
  npm install
