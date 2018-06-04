@@ -6,7 +6,7 @@ configure({ adapter: new Adapter() });
 
 let props = { label: "test", name: "test", onChange: () => (true)};
 
-describe('Terms', () => {
+describe('Test TextInt is rendering', () => {
   const Input = shallow(<TextInput {...props} />);
   it('<TextInput /> should render', () => {
     expect(Input.exists()).toBe(true)
