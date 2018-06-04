@@ -1,10 +1,9 @@
 module.exports = {
   transform: {
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.js?$': 'babel-jest',
   },
   moduleFileExtensions: [
-    'js',
-    'jsx',
+    'js'
   ],
   modulePaths: [
     '<rootDir>/node_modules/',
@@ -15,7 +14,7 @@ module.exports = {
     '^(.*):(.*)$': '$1_$2',
   },
   unmockedModulePathPatterns: [
-    '/^imports\\/.*\\.jsx?$/',
+    '/^imports\\/.*\\.js?$/',
     '/^node_modules/',
   ],
 };
