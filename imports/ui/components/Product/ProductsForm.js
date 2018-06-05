@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TextInput } from '../common/index';
 import ReactLoading from 'react-loading';
 
+// ProductsForm component - represents the Product Form
 export const ProductsForm = ({ product, onChange, saveFormSubmit, errors, addLoading }) => {
   return (
       <form>

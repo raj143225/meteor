@@ -22,6 +22,14 @@ Open another terminal and chnage to project path and mongo server:
 
 ```
 
+Run Test Cases:
+---------------
+```cmp
+npm test
+
+Note: Run this command from project root path
+```
+
 Production Build Steps:
 ----------------------
 ```cmd
@@ -36,9 +44,9 @@ Production Build Steps:
  MONGO_URL=mongodb://******:*******@ds147440.mlab.com:47440/learn-tasks ROOT_URL=https://react-meteor-demo.herokuapp.com/ node main.js
 ```
 
-Demo:
-----
-https://react-meteor-demo.herokuapp.com/
-
 - Deployed Mongo DB in mLab
 - Hosted production build in heroku
+
+Demo:
+----
+https://react-meteor.herokuapp.com/
