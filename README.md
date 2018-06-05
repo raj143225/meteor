@@ -49,4 +49,3 @@ Production Build Steps:
 
 Demo:
 ----
-https://react-meteor.herokuapp.com/
